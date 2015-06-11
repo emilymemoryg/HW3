@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Welcome, {{ username }}{% endblock %}
+{% block body %}
+<p>Member</p>
+<ul>
+  {% for p in allaccount %}
+    <li>username: {{p.username}} password:{{p.password}}</li><a href="/root/{{ p.username }}">remove<a>
+  {% endfor %}
+</ul>
+<a href="/">Back</a>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Register{% endblock %}
+{% block body %}
+<form method="post" action="/member">
+  {% if complaint %}<span class="complaint">{{ complaint }}</span>{% endif %}
+  <label>username: <input name="username" value="{{ username }}"></label>
+  <label>password: <input name="password" value="{{ password }}" type="password"></label>
+  <button type="submit">sign in</button> | <a href="/login">Cancel</a>
+</form>
+{% endblock %}
